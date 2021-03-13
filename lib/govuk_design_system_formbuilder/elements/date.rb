@@ -46,7 +46,7 @@ module GOVUKDesignSystemFormBuilder
       end
 
       def day
-        return nil if omit_day?
+        return if omit_day?
 
         date_part(:day, width: 2, link_errors: true)
       end
@@ -124,7 +124,7 @@ module GOVUKDesignSystemFormBuilder
       end
 
       def date_of_birth_autocomplete_value(segment)
-        return nil unless @date_of_birth
+        return unless @date_of_birth
 
         { day: 'bday-day', month: 'bday-month', year: 'bday-year' }.fetch(segment)
       end

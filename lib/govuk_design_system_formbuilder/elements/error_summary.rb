@@ -11,7 +11,7 @@ module GOVUKDesignSystemFormBuilder
       end
 
       def html
-        return nil unless object_has_errors?
+        return unless object_has_errors?
 
         tag.div(class: summary_class, **summary_options) do
           safe_join([title, summary])
